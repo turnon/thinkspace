@@ -1,0 +1,26 @@
+ul.tag-items {
+    margin-left:0;
+
+    li {
+        float: left;
+        border: 1px solid #aaa;
+        padding: .1em .3em;
+        margin: .1em;
+        list-style:none;
+    }
+
+    a:hover {
+        color: #111;
+    }
+
+    a {
+        color: #aaa;
+    }
+
+    + *{
+        margin-top:5em;
+        clear: both;
+    }
+}
+
+

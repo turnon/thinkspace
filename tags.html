@@ -3,13 +3,18 @@ layout: default
 title: 标签
 ---
 
-{% include intro.html %}
-
 <section class="post-list">
   <div class="container">
     {% assign sorted = site.tags | sort_tags_by_posts_count %}
+
+    <ul class='tag-items'>
+      {% for tag in sorted %}
+        <li><a href='/tags/#t-{{ tag[0] }}'>{{ tag[0] }}</a></li>
+      {% endfor %}
+    </ul>
+
     {% for tag in sorted %}
-      <h2 class="category-title">{{ tag[0] }}</h2>
+      <h2 id="t-{{ tag[0] }}" class="category-title">{{ tag[0] }}</h2>
       {% for post in tag[1] %}
         <article class="post-item">
           <span class="post-meta date-label">{{ post.date | date: "%d %b %Y" }}</span>
