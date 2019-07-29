@@ -12,7 +12,7 @@ title: Home
       <h2 class="category-title">{{ tag[0] }}</h2>
       {% for post in tag[1] %}
         <article class="post-item">
-          <span class="post-meta date-label">{{ post.date | date: "%b %d" }}</span>
+          <span class="post-meta date-label">{{ post.date | date: "%d %b %Y" }}</span>
           <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></div>
         </article>
       {% endfor %}
