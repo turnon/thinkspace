@@ -4,6 +4,7 @@ title: "Markdown Cheatsheet Demo"
 comments: true
 description: "Markdown Cheatsheet Demo..."
 keywords: "markdown, typography components, dummy content"
+tags: ["markdown", "dummy"]
 ---
 
 ## Typography Elements in One
@@ -66,9 +67,9 @@ var modularpattern = (function() {
             return sum;
         },
         reset:function() {
-            return sum = 0;    
-        }  
-    }   
+            return sum = 0;
+        }
+    }
 }());
 alert(modularpattern.add());    // alerts: 1
 alert(modularpattern.add());    // alerts: 2
