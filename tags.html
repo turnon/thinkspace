@@ -7,7 +7,8 @@ title: Home
 
 <section class="post-list">
   <div class="container">
-    {% for tag in site.tags %}
+    {% assign sorted = site.tags | sort_tags_by_posts_count %}
+    {% for tag in sorted %}
       <h2 class="category-title">{{ tag[0] }}</h2>
       {% for post in tag[1] %}
         <article class="post-item">
