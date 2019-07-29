@@ -26,6 +26,14 @@ sass:
   sass_dir  : assets/scss
   style     : compressed # expanded
 
+defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+
 # Author settings
 author:
   name     : "John Doe"
